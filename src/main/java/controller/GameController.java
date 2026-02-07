@@ -25,7 +25,7 @@ public class GameController {
 
     public void play(){
         while(game.isRunning()){
-
+            game.update();
         }
     }
 }

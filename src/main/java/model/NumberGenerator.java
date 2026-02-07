@@ -1,22 +1,22 @@
 package model;
 
-import model.BaseballNumber;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class NumberGenerator {
 
     public BaseballNumber generate(){
-        List<Integer> digits = IntStream.rangeClosed(1, 9)
-                .boxed()
-                .collect(Collectors.toList());
-        Collections.shuffle(digits);
+        List<Integer> nums = new ArrayList<>();
+        for (int i = 1; i <= 9; i++) {
+            nums.add(i);
+        }
+        Collections.shuffle(nums);
 
-        return new BaseballNumber(digits);
+        List<Integer> pick = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            pick.add(nums.get(i));
+        }
+        return new BaseballNumber(pick);
     }
 }

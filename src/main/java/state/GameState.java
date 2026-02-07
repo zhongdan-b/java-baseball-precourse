@@ -1,5 +1,7 @@
 package state;
 
+import model.Game;
+
 public interface GameState {
-    public void handle();
+    void handle(Game game);
 }

@@ -1,6 +1,7 @@
 package state;
 
 import model.BaseballNumber;
+import model.Game;
 
 public class ProgressState implements GameState{
 
@@ -9,7 +10,7 @@ public class ProgressState implements GameState{
     }
 
     @Override
-    public void handle(){
+    public void handle(Game game){
 
     }
 }
